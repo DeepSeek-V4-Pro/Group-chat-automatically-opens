@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "version": "2.0.0",
+  "name": "群聊定时打卡",
+  "description": "自动在指定时间对配置的群聊执行打卡操作的MaiBot插件",
+  "author": {
+    "name": "DeepSeek-V4",
+    "url": "https://github.com/DeepSeek-V4-Pro"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/DeepSeek-V4-Pro/Group-chat-automatically-opens",
+    "homepage": "https://github.com/DeepSeek-V4-Pro/Group-chat-automatically-opens"
+  },
+  "host_application": {
+    "min_version": "1.0.0",
+    "max_version": "1.99.99"
+  },
+  "sdk": {
+    "min_version": "2.0.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [
+    {
+      "name": "aiohttp",
+      "version": ">=3.8.0",
+      "reason": "发送打卡API请求"
+    },
+    {
+      "name": "tomlkit",
+      "version": ">=0.11.0",
+      "reason": "读写config.toml配置文件"
+    }
+  ],
+  "capabilities": [
+    "send.text"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "locales_path": "_locales",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  },
+  "id": "deepseek-v4-pro.Group-chat-automatically-opens"
+}

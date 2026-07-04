@@ -1,0 +1,12 @@
+{
+  "plugin.name": "群聊定时打卡",
+  "plugin.description": "自动在指定时间对配置的群聊执行打卡操作的MaiBot插件",
+  "command.groupsign.help": "群聊打卡管理命令",
+  "command.groupsign.add_group": "将群聊添加至打卡列表",
+  "command.groupsign.remove_group": "从打卡列表移除群聊",
+  "command.groupsign.list_groups": "查看打卡群聊列表",
+  "command.groupsign.execute": "立即在群聊中执行打卡操作",
+  "command.groupsign.start_task": "启动打卡定时任务",
+  "command.groupsign.stop_task": "停止打卡定时任务",
+  "command.groupsign.status": "查看定时任务状态"
+}
