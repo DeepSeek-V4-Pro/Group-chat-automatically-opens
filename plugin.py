@@ -200,7 +200,7 @@ class GroupSignPlugin(MaiBotPlugin):
             logger.error("[GroupSign] 卸载插件时发生错误", exc_info=True)
 
     async def on_config_update(self, scope: str, config_data: dict[str, object], version: str) -> None:
-        del scope, config_data, version
+        # 定时循环每次迭代从 self.config 重新取值，无需在此处做额外同步
 
     # ===== Command 组件 =====
 
@@ -433,7 +433,7 @@ class GroupSignPlugin(MaiBotPlugin):
                         logger.debug(f"[GroupSign] 打卡API响应状态码: {status_code}")
 
                         response_text = await response.text()
-                        logger.debug(f"[GroupSign] 打卡API响应内容: {response_text}")
+                        logger.debug(f"[GroupSign] 打卡API响应: status={status_code}, body={response_text[:200]}{'...' if len(response_text) > 200 else ''}")
 
                         if status_code != 200:
                             return False, f"HTTP请求失败，状态码: {status_code}"
