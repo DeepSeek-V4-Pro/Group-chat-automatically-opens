@@ -29,7 +29,7 @@ class PluginSectionConfig(PluginConfigBase):
     __ui_order__ = 0
 
     enabled: bool = Field(default=True, description="是否启用插件")
-    config_version: str = Field(default="2.0.0", description="配置版本")
+    config_version: str = Field(default="2.1.0", description="配置版本")
     startup_delay: int = Field(default=10, description="插件加载后启动定时任务的延迟时间(秒)")
 
 
@@ -201,6 +201,7 @@ class GroupSignPlugin(MaiBotPlugin):
 
     async def on_config_update(self, scope: str, config_data: dict[str, object], version: str) -> None:
         # 定时循环每次迭代从 self.config 重新取值，无需在此处做额外同步
+        del scope, config_data, version
 
     # ===== Command 组件 =====
 

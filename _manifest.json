@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "name": "群聊定时打卡",
   "description": "自动在指定时间对配置的群聊执行打卡操作的MaiBot插件",
   "author": {
@@ -22,14 +22,14 @@
   },
   "dependencies": [
     {
+      "type": "python_package",
       "name": "aiohttp",
-      "version": ">=3.8.0",
-      "reason": "发送打卡API请求"
+      "version_spec": ">=3.8.0"
     },
     {
+      "type": "python_package",
       "name": "tomlkit",
-      "version": ">=0.11.0",
-      "reason": "读写config.toml配置文件"
+      "version_spec": ">=0.11.0"
     }
   ],
   "capabilities": [
